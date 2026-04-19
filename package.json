@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Eazee Calc - Your easy calculator and currency converter",
   "main": "index.js",
+  "homepage": ".",
   "scripts": {
     "start": "node ./node_modules/react-scripts/bin/react-scripts.js start",
     "build": "node ./node_modules/react-scripts/bin/react-scripts.js build",

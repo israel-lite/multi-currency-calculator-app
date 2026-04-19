@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --gradient-start: #1e3a8a;
+    --gradient-end: #1e40af;
+  }
+  
+  .dark {
+    --gradient-start: #1a202c;
+    --gradient-end: #2d3748;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-gray-100/95 backdrop-blur-lg rounded-2xl shadow-2xl border border-gray-300/50;
+  }
+  
+  .dark .glass-card {
+    @apply bg-gray-800/90 backdrop-blur-lg rounded-2xl shadow-xl border border-gray-700/20;
+  }
+  
+  .gradient-bg {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  }
+  
+  .currency-flag {
+    @apply w-8 h-8 rounded-full object-cover shadow-md;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border-2 border-gray-300 focus:border-blue-700 focus:ring-2 focus:ring-blue-700/30 transition-all duration-200 bg-white shadow-md;
+  }
+
+  .currency-select {
+    padding-left: 5.5rem;
+  }
+  
+  .dark .input-field {
+    @apply bg-gray-700/50 border-gray-600 text-white focus:border-blue-400 focus:ring-blue-400/20;
+  }
+
+  .history-panel {
+    @apply rounded-2xl border-2 border-blue-200 bg-white/90 backdrop-blur-lg shadow-md;
+  }
+
+  .dark .history-panel {
+    @apply border-gray-700/30 bg-gray-900/60;
+  }
+
+  .history-item {
+    @apply bg-white/80 border border-blue-100 hover:bg-white hover:border-blue-200 transition-all duration-200;
+  }
+
+  .dark .history-item {
+    @apply bg-gray-800/70 border-gray-700/40 hover:bg-gray-800/90;
+  }
+}
